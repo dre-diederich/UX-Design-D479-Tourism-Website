@@ -24,7 +24,7 @@ body {
 /* 2. Hero Section */
 .hero-banner {
   background: #eaeaea; /* Wireframe placeholder grey */
-  background-image: url(images/tahiti_img_1.webp);
+  background-image: url(/images/tahiti_img_1.webp);
   padding: 4rem 1rem;
   text-align: center;
 }

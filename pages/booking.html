@@ -3,21 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles/activities.css">
+<link rel="stylesheet" href="/styles/styles.css">
 <title>Book Your Stay</title>
+<style>
+    .hero-banner {
+        background-image: url(/images/rainforresta.webp);
+        background-size: cover;
+    }
+</style>
 </head>
 <body>
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
     <div class="nav-wrap">
-        <a href="index.html" class="logo">
+        <a href="/index.html" class="logo">
             <h1 class="hero-content"><em>Taniti</em></h1>
         </a>
 
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="travel-info.html">Travel Information</a></li>
                 <li><a href="attractions.html">Things to do</a></li>
                 <li><a href="booking.html" class="active">Book Your Stay</a></li>
@@ -31,10 +38,22 @@
 </header>
 
 
-<section class="hero">
-    <h1>Book Your Stay at <em>Taniti</em></h1>
-    <img class="hero-image" src="images/tahiti_img_3.jpg" alt="">
-</section>
+<!-- 2. Hero Banner Section -->
+    <section class="hero-banner">
+      <div class="activities-hero">
+        <h1>EXPLORE TANITI</h1>
+        <form class="search-bar">
+          <input type="text" placeholder="Search attractions, tours, keywords..." required>
+          <button type="submit">Search</button>
+        </form>
+        <div class="quick-pills">
+          <button class="pill">Outdoor</button>
+          <button class="pill">Museums</button>
+          <button class="pill">Family-Friendly</button>
+          <button class="pill">Food & Drink</button>
+        </div>
+      </div>
+    </section>
  
  <!--========== Accommodation Listings ===============-->
 <section class="accommodations">
