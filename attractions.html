@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Wanderly | Travel the World</title>
+</head>
+<body>
+ 
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+    <div class="nav-wrap">
+        <a href="index.html" class="logo">
+            <h1 class="hero-content"><em>Taniti</em></h1>
+        </a>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="travel-info.html">Travel Information</a></li>
+                <li><a href="attractions.html" class="active">Things to do</a></li>
+                <li><a href="booking.html">Book Your Stay</a></li>
+            </ul>
+        </nav>
+
+        <label>&#128269;
+            <input type="text" name="" id="" placeholder="search">
+        </label>
+    </div>
+</header>
+ 
+<!-- ============ HERO ============ -->
+<!-- .hero is position:relative; .booking-widget is pulled up with a negative
+     margin-top so it straddles the hero image and the white section below.
+     This is what creates the "floating card" overlap in the wireframe. -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="eyebrow">✈ Explore. Dream. Discover.</span>
+        <h1>
+            Discover Amazing
+            <em>Places with Us</em>
+        </h1>
+        <p class="hero-subtext">
+            Find the best tours, hotels and flights: everything you need
+            for the perfect trip.
+        </p>
+        <a href="" class="btn btn-primary">
+            Explore Now <span class="arrow">→</span>
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="images/santorini.jpg" alt="Santorini, Greece">
+    </div>
+</section>
+ 
+<!-- ============ BOOKING WIDGET (overlaps hero + trust bar) ============ -->
+<section class="booking-widget">
+    <div class="widget-tabs">
+        <button class="tab active"><img src="images/flight-icon.svg" alt=""> Flights</button>
+        <button class="tab"><img src="images/hotel-icon.svg" alt=""> Hotels</button>
+        <button class="tab"><img src="images/tour-icon.svg" alt=""> Tours</button>
+        <button class="tab"><img src="images/package-icon.svg" alt=""> Packages</button>
+    </div>
+ 
+    <form class="widget-fields">
+        <div class="field">
+            <label>From</label>
+            <div class="field-input">
+                <span>New York (NYC)</span>
+                <img src="images/plane-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="field">
+            <label>To</label>
+            <div class="field-input">
+                <span class="placeholder">Where to?</span>
+                <img src="images/pin-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="field">
+            <label>Depart</label>
+            <div class="field-input">
+                <span>May 20, 2024</span>
+                <img src="images/calendar-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="field">
+            <label>Return</label>
+            <div class="field-input">
+                <span>May 27, 2024</span>
+                <img src="images/calendar-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="field">
+            <label>Travelers</label>
+            <div class="field-input">
+                <span>2 Adults, 1 Child</span>
+                <img src="images/user-icon.svg" alt="">
+            </div>
+        </div>
+ 
+        <button type="submit" class="btn btn-primary btn-search">
+            Search <img src="images/search-icon.svg" alt="">
+        </button>
+    </form>
+</section>
+ 
+<!-- ============ TRUST / VALUE BADGES ============ -->
+<section class="trust-bar">
+    <div class="trust-item">
+        <img src="images/badge-price.svg" alt="">
+        <div>
+            <h3>Best Price Guarantee</h3>
+            <p>We ensure you get the best deals always.</p>
+        </div>
+    </div>
+    <div class="trust-item">
+        <img src="images/badge-support.svg" alt="">
+        <div>
+            <h3>24/7 Customer Support</h3>
+            <p>We're here to help you anytime, anywhere.</p>
+        </div>
+    </div>
+    <div class="trust-item">
+        <img src="images/badge-secure.svg" alt="">
+        <div>
+            <h3>Secure Bookings</h3>
+            <p>Your data and payments are 100% safe with us.</p>
+        </div>
+    </div>
+    <div class="trust-item">
+        <img src="images/badge-curated.svg" alt="">
+        <div>
+            <h3>Handpicked Experiences</h3>
+            <p>Curated tours and hotels for unforgettable trips.</p>
+        </div>
+    </div>
+</section>
+ 
+<!-- ============ POPULAR DESTINATIONS ============ -->
+<section class="popular-destinations">
+    <div class="section-heading">
+        <h2>Popular Destinations</h2>
+        <a href="" class="btn btn-outline">
+            View All Destinations <span class="arrow">→</span>
+        </a>
+    </div>
+ 
+    <div class="destination-grid">
+        <article class="destination-card">
+            <span class="badge badge-bestseller">Bestseller</span>
+            <img src="images/thailand.jpg" alt="Thailand">
+            <div class="card-info">
+                <h3>Thailand</h3>
+                <span class="location"><img src="images/pin-icon.svg" alt="">Phuket</span>
+                <div class="price"><span>From</span>$699</div>
+            </div>
+        </article>
+ 
+        <article class="destination-card">
+            <span class="badge badge-popular">Popular</span>
+            <img src="images/france.jpg" alt="France">
+            <div class="card-info">
+                <h3>France</h3>
+                <span class="location"><img src="images/pin-icon.svg" alt="">Paris</span>
+                <div class="price"><span>From</span>$799</div>
+            </div>
+        </article>
+ 
+        <article class="destination-card">
+            <span class="badge badge-trending">Trending</span>
+            <img src="images/bali.jpg" alt="Bali, Indonesia">
+            <div class="card-info">
+                <h3>Bali, Indonesia</h3>
+                <span class="location"><img src="images/pin-icon.svg" alt="">Ubud</span>
+                <div class="price"><span>From</span>$599</div>
+            </div>
+        </article>
+ 
+        <article class="destination-card">
+            <span class="badge badge-bestseller">Bestseller</span>
+            <img src="images/dubai.jpg" alt="Dubai, UAE">
+            <div class="card-info">
+                <h3>Dubai, UAE</h3>
+                <span class="location"><img src="images/pin-icon.svg" alt="">Dubai</span>
+                <div class="price"><span>From</span>$899</div>
+            </div>
+        </article>
+    </div>
+</section>
+ 
+<!-- ============ WHY CHOOSE US + PROMO CARD ============ -->
+<section class="why-choose">
+    <div class="why-choose-text">
+        <h2>Why Choose <em>Wanderly?</em></h2>
+ 
+        <div class="feature-grid">
+            <div class="feature">
+                <img src="images/icon-choices.svg" alt="">
+                <div>
+                    <h3>Wide Range of Choices</h3>
+                    <p>Choose from thousands of flights, hotels and tours worldwide.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="images/icon-trusted.svg" alt="">
+                <div>
+                    <h3>Trusted by Travelers</h3>
+                    <p>Join millions of happy travelers around the world.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="images/icon-flexible.svg" alt="">
+                <div>
+                    <h3>Flexible &amp; Easy Booking</h3>
+                    <p>Book with ease and adjust your plans if needed.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="images/icon-deals.svg" alt="">
+                <div>
+                    <h3>Exclusive Deals</h3>
+                    <p>Get access to exclusive discounts and special offers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="promo-card">
+        <img src="images/beach-promo.jpg" alt="Traveler on beach">
+        <div class="promo-overlay">
+            <span class="eyebrow">Let's Go!</span>
+            <h3>Your Next Adventure Awaits!</h3>
+            <p>Discover breathtaking places and create unforgettable memories.</p>
+            <a href="" class="btn btn-white">
+                Plan Your Trip <span class="arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+ 
+<!-- ============ NEWSLETTER / FOOTER BAR ============ -->
+<footer class="newsletter-bar">
+    <div class="newsletter-text">
+        <img src="images/paper-plane-icon.svg" alt="">
+        <div>
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest travel deals and inspiration straight to your inbox.</p>
+        </div>
+    </div>
+ 
+    <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-white">Subscribe</button>
+    </form>
+
+</footer>
+ 
+</body>
+</html>

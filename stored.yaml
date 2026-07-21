@@ -1,0 +1,708 @@
+:root {
+    --red: #CE1C25;
+    --blue: hsl(218, 93%, 32%); 
+    --gold: #FF9C0F; 
+    --white: #FFFFFF;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* changes 1rem to equal exactly 10px*/
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
+    color-scheme: light; /* Enables system-level dark mode support*/
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: cadetblue;
+    position: sticky;
+    top: 0;
+    max-height: 80px;
+    z-index: 1000;
+}
+nav img {
+    width: 80px;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    max-height: 500px;
+    min-height: 400px;
+    width: 100%;
+}
+
+.slide1 {
+    background-image: url(images/tahiti_img_1.webp);
+    padding: 2rem 4rem;
+    background-size: cover;
+    max-height: 500px;
+    min-height: 400px;
+}
+.slide2 {
+    background-image: url(images/tahiti_img_2.webp);
+    padding: 2rem 4rem;
+    background-size: cover;
+    min-height: 400px;
+}
+.slide3 {
+    background-image: url(images/tahiti_img_3.jpg);
+    padding: 2rem 4rem;
+    background-size: cover;
+    min-height: 400px;
+}
+.slide4 {
+    background-image: url(images/tahiti_img_4.webp);
+    padding: 2rem 4rem;
+    background-size: cover;
+    min-height: 400px;
+}
+
+/* Next & Prev buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add a background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+/* caption */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.hero {
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 1rem 4rem;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    justify-content: center;
+}
+
+.card-thumb {
+    text-align: center;
+    margin-top: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* span between cards */
+.vr {
+    background-color: #717171;
+    width: 1px;
+    height: 200px;
+}
+
+/* Featured section */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.thumbnail {
+    max-width: 100%;
+    font-size: 15px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 190px;
+    border-radius: 20px;
+}
+
+.featured {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 1rem 2rem;
+    justify-content: center;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    justify-content: center;
+}
+
+/* Plan Your Getaway section */
+.promotion-container {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--white);
+    background-size: cover;
+    background-position: center;
+}
+
+.promotion-container img {
+    max-width: 1000px;
+    padding: 4rem 1rem;
+
+}
+
+.comp {
+    padding: 4rem 1rem; 
+}
+
+.comp h2 {
+    font-size: 6rem;
+}
+.comp p {
+    font-size: 2rem;
+}
+
+.comp button {
+    font-size: 1.4rem;
+}
+
+
+==================================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Visit Taniti</title>
+    
+</head>
+<body>
+    <!--Nav-->
+    <nav>
+        <div class="nav-logo">
+            <img src="images/000000.png" alt="">
+        </div>
+        <ul class="-nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Things to do</a></li>
+            <li><a href="">Experiences</a></li>
+            <li><a href="">Transportation</a></li>
+            <li><a href="">Food</a></li>
+            <li><button><a href="booking.html">Book Trip</a></button></li>
+            <li><img style="width: 40px; height: 40px;" src="images/search-icon-for-any-purposes-vector.webp" alt=""></li>
+        </ul>
+        
+    </nav>
+    <!--nav-end-->
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+             <div class="mySlides">
+                <div class="slide1 one">
+                    <p>WELCOME TO TANITI</p>
+                    <h2>Your Island Escape Awaits</h2>
+                    <p>Discover crystal-clear waters, lush rainforests, rich culture, and unforgettable adventures.</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button">Plan Your Trip</button>
+                        <button class="cta-button">Book Activities</button>
+                    </div>
+                </div>
+             </div>
+
+             <div class="mySlides">
+                <div class="slide2">
+                    <p>FIND YOUR PERFECT STAY</p>
+                    <h2>Relax in Comfort</h2>
+                    <p>Chose from beachfront resorts, cozy hotesls, and charming vacation rentals to make your stay on Taniti unforgettable.</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button">Plan Your Trip</button>
+                        <button class="cta-button">Book Activities</button>
+                    </div>
+                </div>
+             </div>
+
+             <div class="mySlides">
+                <div class="slide3">
+                    <p>EXPLORE THE ISLAND</p>
+                    <h2>Book Your Next Adventure</h2>
+                    <p>From snorkeling vibrant coral reefs to guided volcano hikes, discover exciting activities and create unforgettable memories.</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button">Plan Your Trip</button>
+                        <button class="cta-button">Book Activities</button>
+                    </div>
+                </div>
+             </div>
+
+             <div class="mySlides">
+                <div class="slide4">
+                    <p>ADVENTURE AWAITS</p>
+                    <h2>Experience the Best of Taniti</h2>
+                    <p>
+                        Discover island tours, cultural experiences, water sports,
+                        and family-friendly attractions loved by visitors from around the world.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="cta-button">Things To Do</button>
+                        <button class="cta-button">View Tours</button>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Next and Prev buttons-->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- pagination dots -->
+         <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+         </div>
+    </div>
+    <!--Hero End-->
+
+    <!-- Card -->
+    <div class="card-container">
+        <div class="card">
+            <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px" class="card-thumb"></div>
+            <div class="card-body">THINGS TO DO</div>
+        </div>
+
+        <span class="vr"></span>
+
+        <div class="card">
+            <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+            <div class="card-body">THINGS TO DO</div>
+        </div>
+
+        <span class="vr"></span>
+
+        <div class="card">
+            <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+            <div class="card-body">THINGS TO DO</div>
+        </div>
+
+        <span class="vr"></span>
+
+        <div class="card">
+            <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+            <div class="card-body">THINGS TO DO</div>
+        </div>
+
+        <span class="vr"></span>
+
+        <div class="card">
+            <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+            <div class="card-body">THINGS TO DO</div>
+        </div>
+
+        <span class="vr"></span>
+    </div>
+    <!-- Things to do end-->
+
+    <!---->
+    <div class="container">
+        <h2>FEATURED ADVENTURES</h2>
+    <p>Top activities and attractions loved by visitors</p>
+    </div>
+    <!--end-->
+
+    <!---->
+    <div class="featured">
+        <div class="activity">
+            <div class="thumbnail">
+                <img src="images/sn.jpeg" alt="">
+                <p class="">SNORKELING ADVENTURE</p>
+            </div>
+        </div>
+        <div class="activity">
+            <div class="thumbnail">
+                <img src="images/hike.png" alt="">
+                <p>VOLCANO HIKE</p>
+            </div>
+        </div>
+        <div class="activity">
+            <div class="thumbnail">
+                <img src="images/tour.jpg" alt="">
+                <p>ISLAND CULTURE TOUR</p>
+            </div>
+        </div>
+        <div class="activity">
+            <div class="thumbnail">
+                <img src="images/cruise.jpg" alt="">
+                <p>SUNSET BEACH CRUISE</p>
+            </div>
+        </div>
+    </div> 
+    <!-- Featured End-->
+
+    <!--call-to-action-->
+    <div class="promotion-container">
+        <div class="comp">
+            <h2>Plan Your Perfect Getaway</h2>
+            <p>Whether it's your first visit or your fifth, we have everything you need to plan an unforgettable trip.</p>
+            <button class="cta-button"><a href="travel-guide.html">Plan Your Trip</a></button>
+            <button class="cta-button"><a href="booking.html">Book Activities</a></button>
+        </div>
+        <img src="images/tahiti_img_3.jpg" alt="">
+    </div>
+    <!---->
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-column">
+            <span></span>
+        </div>
+    </footer>
+    <!--footer-end-->
+    <!--Javascript-->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- ============ TRUST / VALUE BADGES ============ -->
+<section class="trust-bar">
+    <div class="trust-item">
+        <img src="images/badge-price.svg" alt="">
+        <div>
+            <h3>Things to Do</h3>
+            <p>We ensure you get the best deals always.</p>
+        </div>
+    </div>
+    <div class="trust-item">
+        <img src="images/badge-support.svg" alt="">
+        <div>
+            <h3>24/7 Customer Support</h3>
+            <p>We're here to help you anytime, anywhere.</p>
+        </div>
+    </div>
+    <div class="trust-item">
+        <img src="images/badge-secure.svg" alt="">
+        <div>
+            <h3>Secure Bookings</h3>
+            <p>Your data and payments are 100% safe with us.</p>
+        </div>
+    </div>
+    <div class="trust-item">
+        <img src="images/badge-curated.svg" alt="">
+        <div>
+            <h3>Handpicked Experiences</h3>
+            <p>Curated tours and hotels for unforgettable trips.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- ============ HERO ============ -->
+<!-- .hero is position:relative; .booking-widget is pulled up with a negative
+     margin-top so it straddles the hero image and the white section below.
+     This is what creates the "floating card" overlap in the wireframe. -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="eyebrow">✈ Explore. Dream. Discover.</span>
+        <h1>
+            Discover Amazing
+            <em>Places with Us</em>
+        </h1>
+        <p class="hero-subtext">
+            Find the best tours, hotels and flights: everything you need
+            for the perfect trip.
+        </p>
+        <a href="" class="btn btn-primary">
+            Explore Now <span class="arrow">→</span>
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="images/tahiti_img_1.webp" alt="Tahiti Beach">
+    </div>
+</section>
+
+
+
+
+<!-- Card -->
+<div class="card-container">
+    <div class="card">
+        <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px" class="card-thumb"></div>
+        <div class="card-body">THINGS TO DO</div>
+    </div>
+
+    <span class="vr"></span>
+
+    <div class="card">
+        <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+        <div class="card-body">THINGS TO DO</div>
+    </div>
+
+    <span class="vr"></span>
+
+    <div class="card">
+        <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+        <div class="card-body">THINGS TO DO</div>
+    </div>
+
+    <span class="vr"></span>
+
+    <div class="card">
+        <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+        <div class="card-body">THINGS TO DO</div>
+    </div>
+
+    <span class="vr"></span>
+
+    <div class="card">
+        <div style="background-color: dimgrey; height: 100px; width: 100px; border-radius: 500px;" class="card-thumb"></div>
+        <div class="card-body">THINGS TO DO</div>
+    </div>
+
+    <span class="vr"></span>
+</div>
+<!-- Things to do end-->
+
+
+<div id="ww_e87b857ec2499" v='1.3' loc='id' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl2839"],"font":"Arial","sl_ics":"one","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/orlando/30_days/" id="ww_e87b857ec2499_u" target="_blank">30 day forecast Orlando FL</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_e87b857ec2499"></script>
+
+
+<!-- ============ WHY CHOOSE US + PROMO CARD ============ -->
+<section class="why-choose">
+    <div class="why-choose-text">
+        <h2>Why Choose <em>Wanderly?</em></h2>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <img src="images/icon-choices.svg" alt="">
+                <div>
+                    <h3>Wide Range of Choices</h3>
+                    <p>Choose from thousands of flights, hotels and tours worldwide.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="images/icon-trusted.svg" alt="">
+                <div>
+                    <h3>Trusted by Travelers</h3>
+                    <p>Join millions of happy travelers around the world.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="images/icon-flexible.svg" alt="">
+                <div>
+                    <h3>Flexible &amp; Easy Booking</h3>
+                    <p>Book with ease and adjust your plans if needed.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="images/icon-deals.svg" alt="">
+                <div>
+                    <h3>Exclusive Deals</h3>
+                    <p>Get access to exclusive discounts and special offers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="promo-card">
+        <img src="images/beach-promo.jpg" alt="Traveler on beach">
+        <div class="promo-overlay">
+            <span class="eyebrow">Let's Go!</span>
+            <h3>Your Next Adventure Awaits!</h3>
+            <p>Discover breathtaking places and create unforgettable memories.</p>
+            <a href="" class="btn btn-white">
+                Plan Your Trip <span class="arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+ <!--========== Accommodation Listings ===============-->
+<section class="accommodations">
+    <h2>Find Your Perfect Stay</h2>
+
+    <div class="accommodation-card">
+        <h3>Coral Bay Hotel</h3>
+        <p><strong>Type:</strong> Hotel</p>
+        <p><strong>Location:</strong> Beachfront District</p>
+        <p><strong>Price:</strong> $149/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Oceanview Grand Resort</h3>
+        <p><strong>Type:</strong> Resort Hotel</p>
+        <p><strong>Location:</strong> Paradise Coast</p>
+        <p><strong>Price:</strong> $229/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Harbor Lights Inn</h3>
+        <p><strong>Type:</strong> Boutique Hotel</p>
+        <p><strong>Location:</strong> Downtown Waterfront</p>
+        <p><strong>Price:</strong> $169/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Sunset Palms Hotel</h3>
+        <p><strong>Type:</strong> Hotel</p>
+        <p><strong>Location:</strong> South Beach</p>
+        <p><strong>Price:</strong> $139/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Island Breeze Suites</h3>
+        <p><strong>Type:</strong> All-Suite Hotel</p>
+        <p><strong>Location:</strong> Central Taniti</p>
+        <p><strong>Price:</strong> $189/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Paradise Reef Resort</h3>
+        <p><strong>Type:</strong> Beach Resort</p>
+        <p><strong>Location:</strong> Coral Coast</p>
+        <p><strong>Price:</strong> $299/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Blue Lagoon Retreat</h3>
+        <p><strong>Type:</strong> Resort</p>
+        <p><strong>Location:</strong> North Shore</p>
+        <p><strong>Price:</strong> $249/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Seabreeze Villa</h3>
+        <p><strong>Type:</strong> Private Villa</p>
+        <p><strong>Location:</strong> Oceanfront</p>
+        <p><strong>Price:</strong> $325/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Coconut Grove Cottage</h3>
+        <p><strong>Type:</strong> Vacation Rental</p>
+        <p><strong>Location:</strong> Island Village</p>
+        <p><strong>Price:</strong> $145/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Harbor View Apartment</h3>
+        <p><strong>Type:</strong> Apartment Rental</p>
+        <p><strong>Location:</strong> Marina District</p>
+        <p><strong>Price:</strong> $119/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Backpacker's Bay Hostel</h3>
+        <p><strong>Type:</strong> Hostel</p>
+        <p><strong>Location:</strong> Downtown</p>
+        <p><strong>Price:</strong> $39/night</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="accommodation-card">
+        <h3>Surfside Guesthouse</h3>
+        <p><strong>Type:</strong> Guesthouse</p>
+        <p><strong>Location:</strong> Beach District</p>
+        <p><strong>Price:</strong> $79/night</p>
+        <button>Book Now</button>
+    </div>
+</section>
