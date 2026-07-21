@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="activities.css">
 <link rel="stylesheet" href="styles.css">
-<title>Wanderly | Travel the World</title>
+<title>Island Activities</title>
 </head>
 <body>
  
@@ -31,222 +32,207 @@
     </div>
 </header>
  
-<!-- ============ HERO ============ -->
-<!-- .hero is position:relative; .booking-widget is pulled up with a negative
-     margin-top so it straddles the hero image and the white section below.
-     This is what creates the "floating card" overlap in the wireframe. -->
-<section class="hero">
-    <div class="hero-content">
-        <span class="eyebrow">✈ Explore. Dream. Discover.</span>
-        <h1>
-            Discover Amazing
-            <em>Places with Us</em>
-        </h1>
-        <p class="hero-subtext">
-            Find the best tours, hotels and flights: everything you need
-            for the perfect trip.
-        </p>
-        <a href="" class="btn btn-primary">
-            Explore Now <span class="arrow">→</span>
-        </a>
-    </div>
-    <div class="hero-image">
-        <img src="images/santorini.jpg" alt="Santorini, Greece">
-    </div>
-</section>
- 
-<!-- ============ BOOKING WIDGET (overlaps hero + trust bar) ============ -->
-<section class="booking-widget">
-    <div class="widget-tabs">
-        <button class="tab active"><img src="images/flight-icon.svg" alt=""> Flights</button>
-        <button class="tab"><img src="images/hotel-icon.svg" alt=""> Hotels</button>
-        <button class="tab"><img src="images/tour-icon.svg" alt=""> Tours</button>
-        <button class="tab"><img src="images/package-icon.svg" alt=""> Packages</button>
-    </div>
- 
-    <form class="widget-fields">
-        <div class="field">
-            <label>From</label>
-            <div class="field-input">
-                <span>New York (NYC)</span>
-                <img src="images/plane-icon.svg" alt="">
-            </div>
+<main>
+    <!-- 2. Hero Banner Section -->
+    <section class="hero-banner">
+      <div class="activities-hero">
+        <h1>EXPLORE TANITI</h1>
+        <form class="search-bar">
+          <input type="text" placeholder="Search attractions, tours, keywords..." required>
+          <button type="submit">Search</button>
+        </form>
+        <div class="quick-pills">
+          <button class="pill">Outdoor</button>
+          <button class="pill">Museums</button>
+          <button class="pill">Family-Friendly</button>
+          <button class="pill">Food & Drink</button>
         </div>
-        <div class="field">
-            <label>To</label>
-            <div class="field-input">
-                <span class="placeholder">Where to?</span>
-                <img src="images/pin-icon.svg" alt="">
-            </div>
+      </div>
+    </section>
+
+    <!-- 4. Main Search Results & Filter Section -->
+    <section class="search-results-container">
+      
+      <!-- Left Sidebar: Filters -->
+      <aside class="filters-sidebar">
+        <h3>Filters (12 active)</h3>
+        
+        <div class="filter-group">
+          <h4>Area of Island</h4>
+          <label><input type="checkbox"> Merriton Landing</label>
+          <label><input type="checkbox"> Yellow Leaf Bay</label>
+          <label><input type="checkbox"> Taniti City</label>
+          <label for=""><input type="checkbox"> Active Volcano</label>
         </div>
-        <div class="field">
-            <label>Depart</label>
-            <div class="field-input">
-                <span>May 20, 2024</span>
-                <img src="images/calendar-icon.svg" alt="">
-            </div>
+
+        <div class="filter-group">
+          <h4>Price</h4>
+          <label><input type="radio" name="price"> Free</label>
+          <label><input type="radio" name="price"> $ ($0 - $30)</label>
+          <label><input type="radio" name="price"> $$ ($30 - $60)</label>
         </div>
-        <div class="field">
-            <label>Return</label>
-            <div class="field-input">
-                <span>May 27, 2024</span>
-                <img src="images/calendar-icon.svg" alt="">
-            </div>
+
+        <div class="filter-group">
+          <h4>Duration</h4>
+          <label><input type="checkbox"> Under 1 hour</label>
+          <label><input type="checkbox"> 1 - 4 hours</label>
+          <label><input type="checkbox"> Full day</label>
         </div>
-        <div class="field">
-            <label>Travelers</label>
-            <div class="field-input">
-                <span>2 Adults, 1 Child</span>
-                <img src="images/user-icon.svg" alt="">
-            </div>
+      </aside>
+
+      <!-- Right Panel: Results Grid -->
+      <div class="results-panel">
+        <div class="results-header">
+          <span>42 activities found</span>
+          <div class="sort-wrapper">
+            <label for="sort-by">Sort:</label>
+            <select id="sort-by">
+              <option>Recommended</option>
+              <option>Price: Low to High</option>
+              <option>Rating</option>
+            </select>
+          </div>
         </div>
- 
-        <button type="submit" class="btn btn-primary btn-search">
-            Search <img src="images/search-icon.svg" alt="">
-        </button>
-    </form>
-</section>
- 
-<!-- ============ TRUST / VALUE BADGES ============ -->
-<section class="trust-bar">
-    <div class="trust-item">
-        <img src="images/badge-price.svg" alt="">
-        <div>
-            <h3>Best Price Guarantee</h3>
-            <p>We ensure you get the best deals always.</p>
+
+        <div class="results-grid">
+          <!-- Item Card 1 -->
+          <article class="activity-card">
+            <div class="card-image-placeholder">
+                <img src="images/ziplining-tahiti-islands.webp" alt="Person ziplining through rainforrest">
+            </div>
+            <div class="card-content">
+              <h3>Ziplinine Across Island</h3>
+              <p class="rating">★ 4.8 <span class="reviews-count">(350 reviews)</span></p>
+              <div class="card-tags">
+                <span class="tag">Family</span>
+                <span class="tag">Top Rated</span>
+                <span class="tag">Outdoor</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">From <strong>$25</strong>/adult</span>
+                <button class="wishlist-icon" aria-label="Save activity">♥</button>
+              </div>
+              <button class="cta-btn">View Details</button>
+            </div>
+          </article>
+
+          <!-- Item Card 2 -->
+          <article class="activity-card">
+            <div class="card-image-placeholder">
+                <img src="images/protected-beach.png" alt="Women relaxing on the beach shore">
+            </div>
+            <div class="card-content">
+              <h3>Sandy Beaches</h3>
+              <p class="rating">★ 4.7 <span class="reviews-count">(210 reviews)</span></p>
+              <div class="card-tags">
+                <span class="tag">Family</span>
+                <span class="tag">Outdoor</span>
+                <span class="tag">Top Rated</span>
+              </div>
+              <div class="card-footer">
+                <span class="price"><strong>$10</strong> Parking Day-Pass</span>
+                <button class="wishlist-icon" aria-label="Save activity">♥</button>
+              </div>
+              <button class="cta-btn">View Details</button>
+            </div>
+          </article>
+
+          <!-- Item Card 2 -->
+          <article class="activity-card">
+            <div class="card-image-placeholder">
+                <img src="images/local-musuem.webp" alt="Group of people exploring Volcanic Lavatube">
+            </div>
+            <div class="card-content">
+              <h3>Historical Taniti Musuem</h3>
+              <p class="rating">★ 4.6 <span class="reviews-count">(610 reviews)</span></p>
+              <div class="card-tags">
+                <span class="tag">Family</span>
+                <span class="tag">History</span>
+                <span class="tag">Top Rated</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">From <strong>$15</strong>/adult</span>
+                <button class="wishlist-icon" aria-label="Save activity">♥</button>
+              </div>
+              <button class="cta-btn">View Details</button>
+            </div>
+          </article>
+
+          <!-- Item Card 2 -->
+          <article class="activity-card">
+            <div class="card-image-placeholder">
+                <img src="images/charted-fishing.avif" alt="Person reeling in fish on a charter fishing boat">
+            </div>
+            <div class="card-content">
+              <h3>Fishing & Boat Charters</h3>
+              <p class="rating">★ 4.8 <span class="reviews-count">(470 reviews)</span></p>
+              <div class="card-tags">
+                <span class="tag">Fishing</span>
+                <span class="tag">Outdoor</span>
+                <span class="tag">Boat</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">From <strong>$80</strong>/adult</span>
+                <button class="wishlist-icon" aria-label="Save activity">♥</button>
+              </div>
+              <button class="cta-btn">View Details</button>
+            </div>
+          </article>
+
+          <!-- Item Card 2 -->
+          <article class="activity-card">
+            <div class="card-image-placeholder">
+                <img src="images/rainforresta.webp" alt="Beautiful Rainforrest with mountainous background and river running through">
+            </div>
+            <div class="card-content">
+              <h3>Explore Beautiful Rainforrests</h3>
+              <p class="rating">★ 4.7 <span class="reviews-count">(210 reviews)</span></p>
+              <div class="card-tags">
+                <span class="tag">Family</span>
+                <span class="tag">Outdoor</span>
+                <span class="tag">Nature</span>
+                <span class="tag">Wildlife</span>
+              </div>
+              <div class="card-footer">
+                <span class="price">From <strong>$100</strong>/person</span>
+                <button class="wishlist-icon" aria-label="Save activity">♥</button>
+              </div>
+              <button class="cta-btn">View Details</button>
+            </div>
+          </article>
+
+          <!-- Item Card -->
+          <article class="activity-card">
+            <div class="card-image-placeholder">
+                <img src="images/helicopter-tour.jpg" alt="Taniti Helicopter on beach">
+            </div>
+            <div class="card-content">
+              <h3>Helicopter Island Tours</h3>
+              <p class="rating">★ 4.8 <span class="reviews-count">(590 reviews)</span></p>
+              <div class="card-tags">
+                <span class="tag">Sightseeing</span>
+                <span class="tag">Helicopter</span>
+                <span class="tag">Top Rated</span>
+              </div>
+              <div class="card-footer">
+                <span class="price"><strong>$10</strong> Parking Day-Pass</span>
+                <button class="wishlist-icon" aria-label="Save activity">♥</button>
+              </div>
+              <button class="cta-btn">View Details</button>
+            </div>
+          </article>
         </div>
-    </div>
-    <div class="trust-item">
-        <img src="images/badge-support.svg" alt="">
-        <div>
-            <h3>24/7 Customer Support</h3>
-            <p>We're here to help you anytime, anywhere.</p>
-        </div>
-    </div>
-    <div class="trust-item">
-        <img src="images/badge-secure.svg" alt="">
-        <div>
-            <h3>Secure Bookings</h3>
-            <p>Your data and payments are 100% safe with us.</p>
-        </div>
-    </div>
-    <div class="trust-item">
-        <img src="images/badge-curated.svg" alt="">
-        <div>
-            <h3>Handpicked Experiences</h3>
-            <p>Curated tours and hotels for unforgettable trips.</p>
-        </div>
-    </div>
-</section>
- 
-<!-- ============ POPULAR DESTINATIONS ============ -->
-<section class="popular-destinations">
-    <div class="section-heading">
-        <h2>Popular Destinations</h2>
-        <a href="" class="btn btn-outline">
-            View All Destinations <span class="arrow">→</span>
-        </a>
-    </div>
- 
-    <div class="destination-grid">
-        <article class="destination-card">
-            <span class="badge badge-bestseller">Bestseller</span>
-            <img src="images/thailand.jpg" alt="Thailand">
-            <div class="card-info">
-                <h3>Thailand</h3>
-                <span class="location"><img src="images/pin-icon.svg" alt="">Phuket</span>
-                <div class="price"><span>From</span>$699</div>
-            </div>
-        </article>
- 
-        <article class="destination-card">
-            <span class="badge badge-popular">Popular</span>
-            <img src="images/france.jpg" alt="France">
-            <div class="card-info">
-                <h3>France</h3>
-                <span class="location"><img src="images/pin-icon.svg" alt="">Paris</span>
-                <div class="price"><span>From</span>$799</div>
-            </div>
-        </article>
- 
-        <article class="destination-card">
-            <span class="badge badge-trending">Trending</span>
-            <img src="images/bali.jpg" alt="Bali, Indonesia">
-            <div class="card-info">
-                <h3>Bali, Indonesia</h3>
-                <span class="location"><img src="images/pin-icon.svg" alt="">Ubud</span>
-                <div class="price"><span>From</span>$599</div>
-            </div>
-        </article>
- 
-        <article class="destination-card">
-            <span class="badge badge-bestseller">Bestseller</span>
-            <img src="images/dubai.jpg" alt="Dubai, UAE">
-            <div class="card-info">
-                <h3>Dubai, UAE</h3>
-                <span class="location"><img src="images/pin-icon.svg" alt="">Dubai</span>
-                <div class="price"><span>From</span>$899</div>
-            </div>
-        </article>
-    </div>
-</section>
- 
-<!-- ============ WHY CHOOSE US + PROMO CARD ============ -->
-<section class="why-choose">
-    <div class="why-choose-text">
-        <h2>Why Choose <em>Wanderly?</em></h2>
- 
-        <div class="feature-grid">
-            <div class="feature">
-                <img src="images/icon-choices.svg" alt="">
-                <div>
-                    <h3>Wide Range of Choices</h3>
-                    <p>Choose from thousands of flights, hotels and tours worldwide.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <img src="images/icon-trusted.svg" alt="">
-                <div>
-                    <h3>Trusted by Travelers</h3>
-                    <p>Join millions of happy travelers around the world.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <img src="images/icon-flexible.svg" alt="">
-                <div>
-                    <h3>Flexible &amp; Easy Booking</h3>
-                    <p>Book with ease and adjust your plans if needed.</p>
-                </div>
-            </div>
-            <div class="feature">
-                <img src="images/icon-deals.svg" alt="">
-                <div>
-                    <h3>Exclusive Deals</h3>
-                    <p>Get access to exclusive discounts and special offers.</p>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <div class="promo-card">
-        <img src="images/beach-promo.jpg" alt="Traveler on beach">
-        <div class="promo-overlay">
-            <span class="eyebrow">Let's Go!</span>
-            <h3>Your Next Adventure Awaits!</h3>
-            <p>Discover breathtaking places and create unforgettable memories.</p>
-            <a href="" class="btn btn-white">
-                Plan Your Trip <span class="arrow">→</span>
-            </a>
-        </div>
-    </div>
-</section>
+      </div>
+    </section>
+
+  </main>
  
 <!-- ============ NEWSLETTER / FOOTER BAR ============ -->
 <footer class="newsletter-bar">
     <div class="newsletter-text">
         <img src="images/paper-plane-icon.svg" alt="">
         <div>
-            <h3>Subscribe to Our Newsletter</h3>
+            <h3>Contact us</h3>
             <p>Get the latest travel deals and inspiration straight to your inbox.</p>
         </div>
     </div>
@@ -257,6 +243,6 @@
     </form>
 
 </footer>
- 
+ <script src="script.js"></script>
 </body>
 </html>
