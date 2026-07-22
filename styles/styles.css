@@ -1,133 +1,3 @@
-/* Hero slideshow */
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    max-height: 500px;
-    min-height: 400px;
-    width: 100%;
-}
-
-.slide1 {
-    background-image: url(images/tahiti_img_1.webp);
-    padding: 2rem 4rem;
-    background-size: cover;
-    max-height: 500px;
-    min-height: 400px;
-}
-.slide2 {
-    background-image: url(images/tahiti_img_2.webp);
-    padding: 2rem 4rem;
-    background-size: cover;
-    min-height: 400px;
-}
-.slide3 {
-    background-image: url(images/tahiti_img_3.jpg);
-    padding: 2rem 4rem;
-    background-size: cover;
-    min-height: 400px;
-}
-.slide4 {
-    background-image: url(images/tahiti_img_4.webp);
-    padding: 2rem 4rem;
-    background-size: cover;
-    min-height: 400px;
-}
-
-/* Next & Prev buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* on hover, add a background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-/* caption */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* dots */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot:hover {
-    background-color: #717171;
-}
-
-
-.slide-hero {
-    width: 100%;
-    margin-top: 50px;
-}
-/* Card container */
-.card-container {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    padding: 1rem 4rem;
-    justify-content: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    justify-content: center;
-}
-
-.card-thumb {
-    text-align: center;
-    margin-top: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-.search {
-    width: 40px
-}
 /* ============ RESET / BASE ============ */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -239,6 +109,58 @@ ul { list-style: none; }
     align-items: center;
     gap: 22px;
 }
+
+/* ========== Mobile Nav =============== */
+.mobile-nav {
+    display: none;
+}
+/* 1. Hide the actual checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* 2. Style the Hamburger Icon */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s ease;
+}
+
+/* 3. Hide the menu by default on mobile */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 4. The Checkbox Hack: Show menu when checked */
+#menu-toggle:checked ~ .nav-links {
+  display: flex;
+}
+
+/* 5. Animate Hamburger to an "X" (Optional) */
+#menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+#menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
 
 .help-contact {
     display: flex;
@@ -866,6 +788,7 @@ footer p {
     .btn-search { width: 100%; margin: 10px 0 0; justify-content: center; }
     .trust-bar { grid-template-columns: repeat(2, 1fr); }
     .destination-grid { grid-template-columns: repeat(2, 1fr); }
+    .hotels-grid { grid-template-columns: repeat(1, 1fr);}
     .why-choose { grid-template-columns: 1fr; }
     .feature-grid { grid-template-columns: 1fr; }
     .newsletter-bar { flex-direction: column; text-align: center; }
