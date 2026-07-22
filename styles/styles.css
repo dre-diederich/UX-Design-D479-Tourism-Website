@@ -785,6 +785,7 @@ footer p {
     .booking-widget { margin-top: -30px; padding: 16px; }
     .widget-fields { flex-wrap: wrap; }
     .field { flex: 1 1 45%; border-right: none; padding: 10px 0; }
+    .search { display: none;} 
     .btn-search { width: 100%; margin: 10px 0 0; justify-content: center; }
     .trust-bar { grid-template-columns: repeat(2, 1fr); }
     .destination-grid { grid-template-columns: repeat(2, 1fr); }
