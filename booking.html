@@ -6,11 +6,20 @@
 <link rel="stylesheet" href="styles/activities.css">
 <link rel="stylesheet" href="styles/styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Book Your Stay</title>
 <style>
     .hero-banner {
-        background-image: url(images/rainforresta.webp);
+        background-image: url(images/booking-hero-banner.webp);
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .hero-banner img {
+        width: 100%;
+    }
+    .activities-hero h1 {
+        color: #ffffff;
     }
 </style>
 </head>
@@ -60,124 +69,388 @@
     <button id="hamburger" class="material-icons" >menu</button>
 </header>
 
+<main>
+    <!-- 2. Hero Banner Section -->
+    <section class="hero-banner">
+      <div class="activities-hero">
+        <h1>EXPLORE TANITI</h1>
+        <form class="search-bar">
+          <input type="text" placeholder="Search attractions, tours, keywords..." required>
+          <button type="submit">Search</button>
+        </form>
+        <div class="quick-pills">
+          <button class="pill">Hostels</button>
+          <button class="pill">Resorts</button>
+          <button class="pill">Hotels</button>
+          <button class="pill">Bed and Breakfasts</button>
+        </div>
+      </div>
+    </section>
 
-<!-- 2. Hero Banner Section -->
-<section class="hero-banner">
-    <div class="activities-hero">
-    <h1>EXPLORE TANITI</h1>
-    <form class="search-bar">
-        <input type="text" placeholder="Search attractions, tours, keywords..." required>
-        <button type="submit">Search</button>
-    </form>
-    <div class="quick-pills">
-        <button class="pill">Outdoor</button>
-        <button class="pill">Museums</button>
-        <button class="pill">Family-Friendly</button>
-        <button class="pill">Food & Drink</button>
-    </div>
-    </div>
-</section>
- 
- <!--========== Accommodation Listings ===============-->
-<section class="accommodations">
-    <h2>Find Your Perfect Stay</h2>
+    <!-- 4. Main Search Results & Filter Section -->
+    <section class="search-results-container">
+      
+      <!-- Left Sidebar: Filters -->
+      <aside class="filters-sidebar">
+        <h3>Filters (12 active)</h3>
+        
+        <div class="filter-group">
+          <h4>Accommodations</h4>
+          <label><input type="checkbox"> Hostels</label>
+          <label><input type="checkbox"> Resort</label>
+          <label><input type="checkbox"> Hotels</label>
+          <label for=""><input type="checkbox"> Bed & Breakfast</label>
+        </div>
 
-    <div class="accommodation-card">
-        <h3>Coral Bay Hotel</h3>
-        <p><strong>Type:</strong> Hotel</p>
-        <p><strong>Location:</strong> Beachfront District</p>
-        <p><strong>Price:</strong> $149/night</p>
-        <button>Book Now</button>
-    </div>
+        <div class="filter-group">
+          <h4>Price</h4>
+          <label><input type="radio" name="price"> ($0 - $100)/night</label>
+          <label><input type="radio" name="price"> ($100 - $150)/night</label>
+          <label><input type="radio" name="price"> ($150 - $200)/night</label>
+        </div>
 
-    <div class="accommodation-card">
-        <h3>Oceanview Grand Resort</h3>
-        <p><strong>Type:</strong> Resort Hotel</p>
-        <p><strong>Location:</strong> Paradise Coast</p>
-        <p><strong>Price:</strong> $229/night</p>
-        <button>Book Now</button>
-    </div>
+      </aside>
 
-    <div class="accommodation-card">
-        <h3>Harbor Lights Inn</h3>
-        <p><strong>Type:</strong> Boutique Hotel</p>
-        <p><strong>Location:</strong> Downtown Waterfront</p>
-        <p><strong>Price:</strong> $169/night</p>
-        <button>Book Now</button>
-    </div>
+      <!-- Right Panel: Results Grid -->
+      <div class="results-panel">
+        <div class="results-header">
+          <span>22 results found</span>
+          <div class="sort-wrapper">
+            <label for="sort-by">Sort:</label>
+            <select id="sort-by">
+              <option>Recommended</option>
+              <option selected>Price: Low to High</option>
+              <option>Rating</option>
+            </select>
+          </div>
+        </div>
 
-    <div class="accommodation-card">
-        <h3>Sunset Palms Hotel</h3>
-        <p><strong>Type:</strong> Hotel</p>
-        <p><strong>Location:</strong> South Beach</p>
-        <p><strong>Price:</strong> $139/night</p>
-        <button>Book Now</button>
-    </div>
+        <div class="results-grid">
+          <!-- Item Card 1 -->
+          <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/coconut-grove-cottage.webp" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Surfside Guesthouse</h3>
+                    <p class="rating">★ 4.6 <span class="reviews-count">(124 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Guesthouse
+                    <br>
+                    <strong>Location: </strong>Beach District
 
-    <div class="accommodation-card">
-        <h3>Island Breeze Suites</h3>
-        <p><strong>Type:</strong> All-Suite Hotel</p>
-        <p><strong>Location:</strong> Central Taniti</p>
-        <p><strong>Price:</strong> $189/night</p>
-        <button>Book Now</button>
-    </div>
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$79</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>  
 
-    <div class="accommodation-card">
-        <h3>Paradise Reef Resort</h3>
-        <p><strong>Type:</strong> Beach Resort</p>
-        <p><strong>Location:</strong> Coral Coast</p>
-        <p><strong>Price:</strong> $299/night</p>
-        <button>Book Now</button>
-    </div>
+            <!-- Item Card 2 -->
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/backpackers-hostel.avif" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Backpacker's Bay Hostel</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(352 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Hostel
+                    <br>
+                    <strong>Location: </strong>Downtown
 
-    <div class="accommodation-card">
-        <h3>Blue Lagoon Retreat</h3>
-        <p><strong>Type:</strong> Resort</p>
-        <p><strong>Location:</strong> North Shore</p>
-        <p><strong>Price:</strong> $249/night</p>
-        <button>Book Now</button>
-    </div>
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$39</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
 
-    <div class="accommodation-card">
-        <h3>Seabreeze Villa</h3>
-        <p><strong>Type:</strong> Private Villa</p>
-        <p><strong>Location:</strong> Oceanfront</p>
-        <p><strong>Price:</strong> $325/night</p>
-        <button>Book Now</button>
-    </div>
+           <!-- Item Card 3 --> 
+          <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/coral-beach-hotel.jpg" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Coral Bay Hotel</h3>
+                    <p class="rating">★ 4.6 <span class="reviews-count">(423 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Hotel
+                    <br>
+                    <strong>Location: </strong>Beachfront District
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$93</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
 
-    <div class="accommodation-card">
-        <h3>Coconut Grove Cottage</h3>
-        <p><strong>Type:</strong> Vacation Rental</p>
-        <p><strong>Location:</strong> Island Village</p>
-        <p><strong>Price:</strong> $145/night</p>
-        <button>Book Now</button>
-    </div>
+            <!-- Item Card 4 -->
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/ocean-view.jpeg" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Oceanview Grand Resort</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(231 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Hotel
+                    <br>
+                    <strong>Location: </strong>Paradise Coast
 
-    <div class="accommodation-card">
-        <h3>Harbor View Apartment</h3>
-        <p><strong>Type:</strong> Apartment Rental</p>
-        <p><strong>Location:</strong> Marina District</p>
-        <p><strong>Price:</strong> $119/night</p>
-        <button>Book Now</button>
-    </div>
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$98</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
 
-    <div class="accommodation-card">
-        <h3>Backpacker's Bay Hostel</h3>
-        <p><strong>Type:</strong> Hostel</p>
-        <p><strong>Location:</strong> Downtown</p>
-        <p><strong>Price:</strong> $39/night</p>
-        <button>Book Now</button>
-    </div>
+          <!-- Item Card 5 -->
+          <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/harbor-lights.jpg" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Harbor Lights Inn</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(262 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Boutique Hotel
+                    <br>
+                    <strong>Location: </strong>Downtown Waterfront
 
-    <div class="accommodation-card">
-        <h3>Surfside Guesthouse</h3>
-        <p><strong>Type:</strong> Guesthouse</p>
-        <p><strong>Location:</strong> Beach District</p>
-        <p><strong>Price:</strong> $79/night</p>
-        <button>Book Now</button>
-    </div>
-</section>
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$139</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+
+            <!-- Item Card 6-->
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/sunset-hotel.avif" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Sunset Palms Hotel</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(523 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Hotel
+                    <br>
+                    <strong>Location: </strong>South Beach
+
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$139</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+
+            <!-- Item Card 7-->
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/e4abff36.avif" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Island Breeze Suites</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(325 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>All-Suite Hotel
+                    <br>
+                    <strong>Location: </strong>Central Taniti
+
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$189</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+
+            <!-- Item Card 8-->
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/paradise-reef.avif" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Paradise Reef Resort</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(352 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Blue Lagoon Retreat
+                    <br>
+                    <strong>Location: </strong>North Shore
+
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$200</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+
+            <!-- Item Card 9-->
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/four-seasons.avif" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Four Seasons</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(262 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Boutique Hotel
+                    <br>
+                    <strong>Location: </strong>Downtown Waterfront
+
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$139</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+
+            <!-- Item Card 10 -->
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/seabreeze.avif" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Seabreeze Villa</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(243 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Private Villa
+                    <br>
+                    <strong>Location: </strong>Oceanfront
+
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$325</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/hotel-image.jpg" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Private Vacation Home</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(262 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Vacation Rental
+                    <br>
+                    <strong>Location: </strong>Island Village
+
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$145</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+
+            <article class="activity-card">
+                <div class="card-image-placeholder">
+                    <img src="images/coconut-grove-cottage.webp" alt="Fancy Hotel Room">
+                </div>
+                <div class="card-content">
+                    <h3>Coconut Grove Cottage</h3>
+                    <p class="rating">★ 4.7 <span class="reviews-count">(262 reviews)</span>
+                    <br>
+                    <strong>Type: </strong>Apartment Rental
+                    <br>
+                    <strong>Location: </strong>Marina District
+
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Shuttle Bus</span>
+                        <span class="tag">Continental Breakfast</span>
+                        <span class="tag">Pool & Hot tub</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">From <strong>$119</strong>/night</span>
+                        <button class="wishlist-icon" aria-label="Save activity">♥</button>
+                    </div>
+                    <button class="cta-btn"><a href="booking.html">View Details</a></button>
+                </div>
+            </article>
+        
+        </div>
+      </div>
+    </section>
+
+  </main>
 <!-- ============ NEWSLETTER / FOOTER BAR ============ -->
 <footer class="newsletter-bar">
     <div class="newsletter-text">
