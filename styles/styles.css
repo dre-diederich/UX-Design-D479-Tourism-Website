@@ -58,6 +58,8 @@ ul { list-style: none; }
 
 .btn-white {
     background: #fff;
+    border-radius: 30px;
+    width: 50px;
     color: var(--blue);
 }
 .btn-white:hover { background: #EAF1FE; }
@@ -69,6 +71,7 @@ ul { list-style: none; }
     top: 0;
     background: #f9fafb;
     z-index: 100;
+    justify-content: space-between;
 }
 
 .nav-wrap {
@@ -110,56 +113,7 @@ ul { list-style: none; }
     gap: 22px;
 }
 
-/* ========== Mobile Nav =============== */
-.mobile-nav {
-    display: none;
-}
-/* 1. Hide the actual checkbox */
-#menu-toggle {
-  display: none;
-}
 
-/* 2. Style the Hamburger Icon */
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  width: 30px;
-  height: 3px;
-  background-color: #333;
-  transition: 0.3s ease;
-}
-
-/* 3. Hide the menu by default on mobile */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-}
-
-/* 4. The Checkbox Hack: Show menu when checked */
-#menu-toggle:checked ~ .nav-links {
-  display: flex;
-}
-
-/* 5. Animate Hamburger to an "X" (Optional) */
-#menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-#menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-}
-#menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
 
 
 .help-contact {
@@ -777,21 +731,58 @@ footer p {
     color: #ffffff;
 }
 
+.mobile-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mobile-logo {
+    display: none;
+    color: var(--blue);
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#hamburger, #close-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--blue-dark);
+    font-size: 30px;
+    display: none;
+    position: relative;
+}
+
+.button-container {
+    align-items: flex-start;
+}
 /* ============ RESPONSIVE ============ */
-@media (max-width: 900px) {
+@media screen and (max-width: 768px) {
     .main-nav { display: none; }
+    .nav-wrap { display: none;}
+    .site-header { display: flex; justify-content: space-between;}
+    #hamburger, #close-btn { display: block;}
     .hero { grid-template-columns: 1fr; padding-bottom: 60px; }
+    .mobile-logo { height: 34px; color: var(--blue-dark); display: block;}
     .hero-image { height: 280px; }
     .booking-widget { margin-top: -30px; padding: 16px; }
     .widget-fields { flex-wrap: wrap; }
     .field { flex: 1 1 45%; border-right: none; padding: 10px 0; }
     .search { display: none;} 
+    #search-bar { display: none;}
     .btn-search { width: 100%; margin: 10px 0 0; justify-content: center; }
+    .section-heading h2 { font-size: 24px;}
+    .section-heading { justify-content: space-between; display: block; }
+    .section-heading a { font-size: 12px;}
     .trust-bar { grid-template-columns: repeat(2, 1fr); }
-    .destination-grid { grid-template-columns: repeat(2, 1fr); }
+    .destination-grid { grid-template-columns: repeat(1, 1fr); }
     .hotels-grid { grid-template-columns: repeat(1, 1fr);}
     .why-choose { grid-template-columns: 1fr; }
     .feature-grid { grid-template-columns: 1fr; }
-    .newsletter-bar { flex-direction: column; text-align: center; }
+    .newsletter-bar { flex-direction: column; text-align: center; font-size: 12px; }
     .newsletter-form input { width: 100%; }
 }

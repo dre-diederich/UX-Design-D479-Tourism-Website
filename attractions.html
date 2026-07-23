@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles/activities.css">
 <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <title>Island Activities</title>
 <style>
   .hero-banner {
@@ -17,9 +18,12 @@
  
 
 <!-- ============ HEADER ============ -->
-<header class="site-header">
+<header class="site-header" id="site-header">
+    <a href="index.html" id="logo" class="mobile-logo">
+      <h1 class="hero-content"><em>Taniti</em></h1>
+    </a>
     <div class="nav-wrap">
-        <a href="index.html" class="logo">
+        <a href="index.html" id="logo" class="logo">
             <h1 class="hero-content"><em>Taniti</em></h1>
         </a>
 
@@ -29,13 +33,32 @@
                 <li><a href="travel-info.html">Travel Information</a></li>
                 <li><a href="attractions.html" class="active">Things to do</a></li>
                 <li><a href="booking.html">Book Your Stay</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
-        <label>&#128269;
-            <input type="text" name="" id="" placeholder="search">
+        <label class="search">&#128269;
+            <input type="text" name="" id="search-bar" placeholder="search">
         </label>
     </div>
+    <div class="mobile-menu">
+        <div class="sidebar" style="display: none;" id="mySidebar">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="travel-info.html">Travel Info</a></li>
+                <li><a href="attractions.html" class="active">Things to do</a></li>
+                <li><a href="booking.html">Book Your Stay</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!---=========CLOSE BUTTON========-->
+        <div class="button-container">
+            <button id="close-btn" style="display: none;" class="material-icons">close</button>
+        </div>
+        
+    </div>
+    <button id="hamburger" class="material-icons" >menu</button>
 </header>
  
 <main>
@@ -236,18 +259,16 @@
 <!-- ============ NEWSLETTER / FOOTER BAR ============ -->
 <footer class="newsletter-bar">
     <div class="newsletter-text">
-        <img src="images/paper-plane-icon.svg" alt="">
         <div>
-            <h3>Contact us</h3>
-            <p>Get the latest travel deals and inspiration straight to your inbox.</p>
+          <h3>Contact Us</h3>
+          <br>
+          <p>Please Message Our Tourism Office For Any Additional Inquiries, Thank You!</p>
         </div>
     </div>
  
     <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn btn-white">Subscribe</button>
+        <button type="submit" class="btn"><a href="contact.html">Contact Us</a></button>
     </form>
-
 </footer>
  <script src="script.js"></script>
 </body>

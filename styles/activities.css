@@ -210,9 +210,7 @@ body {
   padding: 3rem 1rem;
 }
 
-.newsletter-form {
-  margin-top: 1.5rem;
-}
+
 
 .newsletter-form input {
   padding: 0.75rem;
@@ -221,14 +219,7 @@ body {
   border: none;
 }
 
-.newsletter-form button {
-  padding: 0.75rem 1.5rem;
-  background: #fff;
-  color: #333;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
+
 
 /* 7. Footer */
 .global-footer {
@@ -238,11 +229,7 @@ body {
   text-align: center;
 }
 
-.footer-links a {
-  color: #aaa;
-  margin: 0 0.5rem;
-  text-decoration: none;
-}
+
 
 .copyright {
   margin-top: 1rem;
