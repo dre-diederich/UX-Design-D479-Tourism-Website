@@ -33,6 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         
 
+        // contact button link to contact page
+        const contactButton = document.getElementById("contact-button");
+
+        function handleClick(e) {
+            window.location.href = "contact.html"
+        }
+
+        contactButton.addEventListener('click', handleClick);
+
         
         
 });
